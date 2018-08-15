@@ -1,0 +1,12 @@
+.example-container .mat-form-field {
+  display: block;
+}
+.status-label{
+  display: block;
+}
+.btn-position{
+  float: right;
+}
+.invalid-feedback{
+  display: block;
+}

@@ -1,0 +1,74 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <h3>
+        {{formtitle}}
+      </h3>
+    </div>
+  </div>
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
+    <div class="example-container">
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput formControlName="firstName" placeholder="First Name">
+          </mat-form-field>
+          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
+            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput formControlName="lastName" placeholder="Last Name">
+          </mat-form-field>
+          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
+            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput formControlName="email" placeholder="Email">
+          </mat-form-field>
+          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+            <div *ngIf="f.email.errors.required">Email is required</div>
+            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <mat-form-field>
+            <input matInput type="tel" mask="( 0000 ) - 000 - 000" formControlName="phoneNumber" placeholder="Phone Number">
+          </mat-form-field>
+          <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+            <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+            <div *ngIf="f.phoneNumber.errors.minlength">Phone Number must be at least 6 characters</div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+
+        <div class="col">
+          <label class="status-label">Status </label>
+          <mat-radio-group formControlName="status">
+            <mat-radio-button value="active">Active</mat-radio-button>
+            <mat-radio-button class="ml-3" value="inactive">Inactive</mat-radio-button>
+          </mat-radio-group>
+          <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
+            <div *ngIf="f.status.errors.required">Status is required</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col ">
+        <button class="btn-position" [disabled]="contactForm.invalid" type="submit" mat-raised-button color="primary">Save</button>
+        <button class="btn-position mr-2" mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+      </div>
+    </div>
+  </form>
+</div>

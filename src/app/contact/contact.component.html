@@ -1,0 +1,108 @@
+<div class="not-found" *ngIf="!contactList?.length">
+
+</div>
+<mat-toolbar color="primary" *ngIf="contactList?.length">
+  <mat-toolbar-row>
+    <span id="evo-nav-heading">Evolent Contact App </span>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<section class="main" *ngIf="contactList?.length">
+
+
+  <div class="container">
+    <div class="row mb-3">
+      <div class="col">
+        <mat-form-field id="search-contact">
+          <input matInput id="name" name="name" [(ngModel)]="searchTerm" placeholder="Search Contact By Name , Email or Contact Number">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4" *ngFor="let contact of contactList | filterContacts:searchTerm">
+
+        <ng-container>
+          <mat-card class="example-card text-center">
+            <div class="contact-header">
+            </div>
+            <div class="contact-img-header">
+              <img class="rounded-circle contact-image mt-2 mb-3" src="../../assets/img/user-avatar.png" alt="Photo of a Shiba Inu">
+            </div>
+
+            <h5>
+              {{contact.firstName}} {{contact.lastName}}
+            </h5>
+
+            <mat-card-content>
+              <div class="row contact-body">
+                <div class="col">
+                  <div class="row">
+                    <div class="col">
+
+                      <span>{{contact.email}} </span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+
+                      <span>{{contact.phoneNumber}} </span>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col">
+
+                      <span [ngClass]="{'online':  contact.status === 'active',
+                                          'offline':  contact.status === 'inactive'}">
+                        {{contact.status | titlecase}} </span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+              <div class="row mt-3">
+
+                <div class="col">
+
+                  <button class="mb-2" mat-stroked-button color="primary" (click)="openFormDialog(contact)" matTooltip="Edit contact" [matTooltipPosition]="position">
+                    <i class="material-icons action-icon edit-icon mr-2">
+                      edit
+                    </i> Edit </button>
+                </div>
+                <div class="col">
+                  <button mat-stroked-button color="accent" (click)="deleteContact(contact.id)" matTooltip="Delete contact" [matTooltipPosition]="position">
+                    <i class="material-icons action-icon delete-icon mr-2">
+                      delete
+                    </i> delete </button>
+                </div>
+
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </ng-container>
+
+      </div>
+      <!-- 
+      <ng-template #no>
+        <h5>dasdasdasdasasd</h5>
+      </ng-template> -->
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <button class="add-contact-btn  blue-pulse" mat-fab color="primary" matTooltip="Add a new contact" [matTooltipPosition]="position"
+        (click)="openFormDialog()">
+        <i class="material-icons">
+          add
+        </i>
+      </button>
+    </div>
+  </div>
+</div>
