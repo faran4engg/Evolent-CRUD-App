@@ -1,7 +1,3 @@
-#search-result{
-  // background: linear-gradient( rgba(0,0,0, 0.2), rgba(0, 0, 0, 0.7)), url(../../assets/img/bg-01.jpg) center;
-  // height: 99.9vh;
-}
 .not-found {
   background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7)), url(../../assets/img/not-found.jpg) center;
   height: 99.9vh;
@@ -30,59 +26,9 @@
   width: 100%;
 }
 
-.no-record-anim {
-  width: 100%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.no-record-title {
-  display: block;
-  font-size: 2rem;
-  font-weight: lighter;
-  text-align: center;
-}
-
-.no-record-description {
-  font-size: 1.2rem;
-  font-weight: lighter;
-}
-
-.main-graphic {
-  position: relative;
-}
-
-.cogAnimation {
-  width: 10rem;
-  height: 10rem;
-  fill: #6aafe6;
-  transition: easeInOutQuint();
-  animation: cogAnimation 5s infinite;
-}
-
 .blue-pulse {
   animation: blue-pulse 1s infinite;
   -webkit-animation: blue-pulse 1s infinite;
-}
-
-@keyframes cogAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@-webkit-keyframes cogAnimation {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
 }
 
 @-webkit-keyframes blue-pulse {

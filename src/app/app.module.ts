@@ -10,6 +10,7 @@ import { ContactComponent } from './contact/contact.component';
 import { EvoCardComponent } from './evo-card/evo-card.component';
 import { ContactDataService } from './services/contact.data.service';
 import { StorageService } from './services/storage.service';
+import { NoDataComponent } from './no-data/no-data.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { StorageService } from './services/storage.service';
     AppComponent,
     ContactComponent,
     ContactFormComponent,
-    EvoCardComponent
+    EvoCardComponent,
+    NoDataComponent
   ],
   entryComponents: [ContactFormComponent],
   imports: [
