@@ -14,21 +14,21 @@ export class ContactComponent implements OnInit {
 
   position = 'above';
   contactList: Array<ContactFormDialog> = [];
-  contactListToCheck = [];
+  contactListToCheck: any[];
 
 
   constructor(public dialog: MatDialog, private contactServ: ContactDataService) {
-    this.contactList = this.contactServ.getAll();
+
   }
 
   ngOnInit() {
-
+    this.contactListToCheck = this.contactList = this.contactServ.getAll();
     this.contactServ.watchStorage().subscribe((data: string) => {
       this.contactList = JSON.parse(localStorage.getItem('contactList'));
       this.contactListToCheck = Array.from(this.contactList);
     });
 
-    this.contactListToCheck = Array.from(this.contactList);
+    // this.contactListToCheck = Array.from(this.contactList);
 
 
 
