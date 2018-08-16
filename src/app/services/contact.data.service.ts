@@ -32,6 +32,7 @@ export class ContactDataService {
     }
 
     delete(id) {
+        this.contactData = this.storageServ.getAll();
         const index = this.storageServ.findContactIndexById(id, this.contactData);
         this.contactData.splice(index, 1);
         this.storeInDB(this.contactData);
