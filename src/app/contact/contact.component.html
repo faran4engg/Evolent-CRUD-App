@@ -1,6 +1,6 @@
 <div class="not-found" *ngIf="!contactListToCheck?.length"></div>
 
-<section *ngIf="contactListToCheck?.length">
+<section id="search-result" *ngIf="contactListToCheck?.length">
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span id="evo-nav-heading">Evolent Contact App </span>
@@ -10,7 +10,7 @@
     <div class="row mb-3">
       <div class="col">
         <mat-form-field id="search-contact">
-          <input matInput id="name" name="name" [(ngModel)]="searchTerm" (keyup)="filterContact(searchTerm)" placeholder="Search Contact By Name , Email or Contact Number">
+          <input matInput id="name" name="name" [(ngModel)]="searchTerm" (keyup)="filterContact(searchTerm)" placeholder="Search Contact By Name , Email or Number">
         </mat-form-field>
       </div>
     </div>
@@ -44,9 +44,10 @@
     <div class="col">
       <button class="add-contact-btn  blue-pulse" mat-fab color="primary" matTooltip="Add a new contact" [matTooltipPosition]="position"
         (click)="openFormDialog()">
-        <i class="material-icons">
-          add
-        </i>
+        <!-- <i class="material-icons">
+          Add
+        </i> -->
+        Add
       </button>
     </div>
   </div>

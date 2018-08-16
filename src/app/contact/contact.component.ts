@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
 import { ContactFormDialog } from '../models/contact-form-dialog';
-import { ContactDataService } from '../services/contact.data.service';
+import { StorageService } from '../services/storage.service';
 
 @Component({
   selector: 'app-contact',
@@ -17,11 +17,11 @@ export class ContactComponent implements OnInit {
   contactListToCheck: any[];
 
 
-  constructor(public dialog: MatDialog, private contactServ: ContactDataService) { }
+  constructor(public dialog: MatDialog, public storageServ: StorageService) { }
 
   ngOnInit() {
-    this.contactListToCheck = this.contactList = this.contactServ.getAll();
-    this.contactServ.watchStorage().subscribe((data: string) => {
+    this.contactListToCheck = this.contactList = this.storageServ.getAll();
+    this.storageServ.watchStorage().subscribe((data: string) => {
       this.contactList = JSON.parse(localStorage.getItem('contactList'));
       this.contactListToCheck = Array.from(this.contactList);
     });
@@ -35,7 +35,7 @@ export class ContactComponent implements OnInit {
   }
 
   filterContact(term) {
-    this.contactList = this.contactServ.filter(term, this.contactListToCheck);
+    this.contactList = this.storageServ.filter(term, this.contactListToCheck);
   }
 
 }

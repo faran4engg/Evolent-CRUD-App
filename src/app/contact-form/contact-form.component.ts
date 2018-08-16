@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
 import { ContactFormDialog } from '../models/contact-form-dialog';
 import { ContactDataService } from '../services/contact.data.service';
+import { StorageService } from '../services/storage.service';
 
 
 @Component({
@@ -23,7 +24,8 @@ export class ContactFormComponent implements OnInit {
         private fb: FormBuilder,
         public dialogRef: MatDialogRef<ContactFormComponent>,
         @Inject(MAT_DIALOG_DATA) public data: ContactFormDialog,
-        private contactServ: ContactDataService) { }
+        private contactServ: ContactDataService,
+        public storageServ: StorageService) { }
 
     setval(data: ContactFormDialog) {
 
@@ -60,10 +62,10 @@ export class ContactFormComponent implements OnInit {
 
         if (this.isEditMode) {
             this.contactServ.edit(contactFormData);
-            this.contactServ.showSnackBar('Contact Updated Successfully', 'OK');
+            this.storageServ.showSnackBar('Contact Updated Successfully', 'OK');
         } else {
             this.contactServ.add(contactFormData);
-            this.contactServ.showSnackBar('Contact Added Successfully', 'OK');
+            this.storageServ.showSnackBar('Contact Added Successfully', 'OK');
         }
 
         this.dialogRef.close();
