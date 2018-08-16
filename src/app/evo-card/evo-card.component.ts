@@ -1,0 +1,34 @@
+import { Component, Input } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { ContactDataService } from '../services/contact.data.service';
+import { ContactFormComponent } from '../contact-form/contact-form.component';
+
+@Component({
+    selector: 'app-evo-card',
+    templateUrl: './evo-card.component.html',
+    styleUrls: ['./evo-card.component.css']
+})
+export class EvoCardComponent {
+
+    position = 'above';
+    // tslint:disable-next-line:no-input-rename
+    @Input('card-data') cardData;
+
+    constructor(public dialog: MatDialog, private contactServ: ContactDataService) { }
+
+    openFormDialog(formData = ''): void {
+
+        const dialogRef = this.dialog.open(ContactFormComponent, {
+            width: '600px',
+            data: formData
+        });
+
+    }
+
+    deleteContact(id) {
+        this.contactServ.delete(id);
+        this.contactServ.showSnackBar('Contact Deleted Successfully', 'OK');
+    }
+
+
+}

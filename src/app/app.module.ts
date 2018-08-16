@@ -8,13 +8,15 @@ import { AppComponent } from './app.component';
 import { ContactFormComponent } from './contact-form/contact-form.component';
 import { ContactComponent } from './contact/contact.component';
 import { ContactDataService } from './services/contact.data.service';
+import { EvoCardComponent } from './evo-card/evo-card.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    EvoCardComponent
   ],
   entryComponents: [ContactFormComponent],
   imports: [
