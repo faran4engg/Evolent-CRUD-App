@@ -32,16 +32,12 @@
     <div class="row mt-3">
       <div class="col">
         <button class="mb-2" mat-stroked-button color="primary" (click)="openFormDialog(cardData)" matTooltip="Edit contact" [matTooltipPosition]="position">
-          <!-- <i class="material-icons action-icon edit-icon mr-2">
-            edit
-          </i>  -->
+         <img src="../../assets/img/edit.png" alt="Edit">
           Edit </button>
       </div>
       <div class="col">
         <button mat-stroked-button color="accent" (click)="deleteContact(cardData.id)" matTooltip="Delete contact" [matTooltipPosition]="position">
-          <!-- <i class="material-icons action-icon delete-icon mr-2">
-            delete
-          </i> -->
+          <img src="../../assets/img/garbage.png" alt="Delete">
           Delete </button>
       </div>
     </div>
