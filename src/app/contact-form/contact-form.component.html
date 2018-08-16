@@ -13,9 +13,12 @@
           <mat-form-field>
             <input matInput formControlName="firstName" placeholder="First Name">
           </mat-form-field>
-          <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback">
-            <div *ngIf="f.firstName.errors.required">First Name is required</div>
+          <div class="invalid-feedback" *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)">
+            <div *ngIf="f.firstName.errors">
+              <div *ngIf="f.firstName.errors.required">First Name is required</div>
+            </div>
           </div>
+
         </div>
       </div>
       <div class="row">
@@ -23,8 +26,10 @@
           <mat-form-field>
             <input matInput formControlName="lastName" placeholder="Last Name">
           </mat-form-field>
-          <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback">
-            <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+          <div class="invalid-feedback" *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)">
+            <div *ngIf="f.lastName.errors">
+              <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+            </div>
           </div>
         </div>
       </div>
@@ -33,9 +38,11 @@
           <mat-form-field>
             <input matInput formControlName="email" placeholder="Email">
           </mat-form-field>
-          <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
-            <div *ngIf="f.email.errors.required">Email is required</div>
-            <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+          <div class="invalid-feedback" *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
+            <div *ngIf="f.email.errors">
+              <div *ngIf="f.email.errors.required">Email is required</div>
+              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+            </div>
           </div>
         </div>
       </div>
@@ -44,9 +51,11 @@
           <mat-form-field>
             <input matInput type="tel" mask="( 0000 ) - 000 - 000" formControlName="phoneNumber" placeholder="Phone Number">
           </mat-form-field>
-          <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
-            <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
-            <div *ngIf="f.phoneNumber.errors.minlength">Phone Number must be at least 6 characters</div>
+          <div class="invalid-feedback" *ngIf="f.phoneNumber.invalid && (f.phoneNumber.dirty || f.phoneNumber.touched)">
+            <div *ngIf="f.phoneNumber.errors">
+              <div *ngIf="f.phoneNumber.errors.required">Phone Number is required</div>
+              <div *ngIf="f.phoneNumber.errors.minlength">Phone Number must be at least 6 characters</div>
+            </div>
           </div>
         </div>
       </div>
@@ -54,12 +63,9 @@
         <div class="col">
           <label class="status-label">Status </label>
           <mat-radio-group formControlName="status">
-            <mat-radio-button value="active">Active</mat-radio-button>
+            <mat-radio-button checked value="active">Active</mat-radio-button>
             <mat-radio-button class="ml-3" value="inactive">Inactive</mat-radio-button>
           </mat-radio-group>
-          <div *ngIf="submitted && f.status.errors" class="invalid-feedback">
-            <div *ngIf="f.status.errors.required">Status is required</div>
-          </div>
         </div>
       </div>
     </div>
