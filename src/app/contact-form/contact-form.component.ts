@@ -45,7 +45,7 @@ export class ContactFormComponent implements OnInit {
             lastName: ['', Validators.required],
             email: ['', [Validators.required, Validators.email]],
             phoneNumber: ['', [Validators.required]],
-            status: ['', Validators.required],
+            status: ['active', Validators.required],
             id: ['']
         });
 
