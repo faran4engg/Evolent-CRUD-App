@@ -1,3 +1,4 @@
+import { ContactFormDialog } from './../models/contact-form-dialog';
 import { StorageService } from './../services/storage.service';
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
@@ -13,7 +14,7 @@ export class EvoCardComponent {
 
     position = 'above';
     // tslint:disable-next-line:no-input-rename
-    @Input('card-data') cardData;
+    @Input('card-data') cardData: any;
 
     constructor(public dialog: MatDialog, private contactServ: ContactDataService, private storageServ: StorageService) { }
 
@@ -26,7 +27,7 @@ export class EvoCardComponent {
 
     }
 
-    deleteContact(id) {
+    deleteContact(id: string) {
         this.contactServ.delete(id);
         this.storageServ.showSnackBar('Contact Deleted Successfully', 'OK');
     }

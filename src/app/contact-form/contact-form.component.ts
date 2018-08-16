@@ -1,9 +1,9 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
-import { ContactFormDialog } from '../models/contact-form-dialog';
+import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
 import { ContactDataService } from '../services/contact.data.service';
 import { StorageService } from '../services/storage.service';
+import { ContactFormDialog } from './../models/contact-form-dialog';
 
 
 @Component({
@@ -56,9 +56,8 @@ export class ContactFormComponent implements OnInit {
         }
     }
 
-    onSubmit(contactFormData) {
+    onSubmit(contactFormData: ContactFormDialog) {
 
-        this.submitted = true;
 
         if (this.isEditMode) {
             this.contactServ.edit(contactFormData);

@@ -1,3 +1,4 @@
+import { ContactFormDialog } from './../models/contact-form-dialog';
 import { Injectable } from '@angular/core';
 import { MatSnackBar } from '@angular/material';
 import { Observable, Subject } from 'rxjs';
@@ -15,11 +16,11 @@ export class StorageService {
 
   generateId() { return Math.random().toString(36).substring(2, 15) + Math.random().toString(36).substring(2, 15); }
 
-  findContactIndexById(id, contact) { return contact.findIndex(item => item['id'] === id); }
+  findContactIndexById(id: string, contact: ContactFormDialog[]) { return contact.findIndex(item => item['id'] === id); }
 
 
 
-  filter(searchTerm, dataArr) {
+  filter(searchTerm: string, dataArr: ContactFormDialog[]) {
     if (!searchTerm) {
       return dataArr;
     }
@@ -29,7 +30,7 @@ export class StorageService {
       return element.firstName.toLowerCase().includes(searchTerm) ||
         element.lastName.toLowerCase().includes(searchTerm) ||
         element.email.toLowerCase().includes(searchTerm) ||
-        element.phoneNumber.toLowerCase().includes(searchTerm);
+        element.phoneNumber.toString().includes(searchTerm);
     });
   }
 
@@ -42,7 +43,7 @@ export class StorageService {
     this.storageSub.next({ key: data });
   }
 
-  showSnackBar(message, action) {
+  showSnackBar(message: string, action: string) {
     this.snackBar.open(message, action, {
       duration: 4000,
     });

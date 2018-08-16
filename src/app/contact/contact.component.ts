@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
     });
   }
 
-  filterContact(term) {
+  filterContact(term: string) {
     this.contactList = this.storageServ.filter(term, this.contactListToCheck);
   }
 
