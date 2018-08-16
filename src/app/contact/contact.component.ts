@@ -14,7 +14,7 @@ export class ContactComponent implements OnInit {
 
   position = 'above';
   contactList: Array<ContactFormDialog> = [];
-  // filteredContacts = [];
+  contactListToCheck = [];
 
 
   constructor(public dialog: MatDialog, private contactServ: ContactDataService) {
@@ -22,10 +22,13 @@ export class ContactComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.filteredContacts = this.contactList;
+
     this.contactServ.watchStorage().subscribe((data: string) => {
       this.contactList = JSON.parse(localStorage.getItem('contactList'));
+      this.contactListToCheck = Array.from(this.contactList);
     });
+
+    this.contactListToCheck = Array.from(this.contactList);
 
 
 
@@ -44,6 +47,13 @@ export class ContactComponent implements OnInit {
 
     this.contactServ.delete(id);
     this.contactServ.showSnackBar('Contact Delet Successfully', 'OK');
+  }
+
+  filterContact(term) {
+
+    this.contactList = this.contactServ.filter(term, this.contactListToCheck);
+
+
   }
 
 }

@@ -83,5 +83,26 @@ export class ContactDataService {
 
   }
 
+  filter(searchTerm, dataArr) {
+    // let retval;
+    if (!searchTerm) {
+      // retval = dataArr;
+      return dataArr;
+    }
+
+    searchTerm = searchTerm.toLowerCase().trim();
+
+    return dataArr.filter(element => {
+      return element.firstName.toLowerCase().includes(searchTerm) ||
+        element.lastName.toLowerCase().includes(searchTerm) ||
+        element.email.toLowerCase().includes(searchTerm) ||
+        element.phoneNumber.toLowerCase().includes(searchTerm);
+    });
+    // console.log(retval);
+
+    // return retval;
+
+  }
+
 
 }
