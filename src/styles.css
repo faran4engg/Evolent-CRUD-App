@@ -1,11 +1,6 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
-/* @import url('https://fonts.googleapis.com/css?family=Lato'); */
-
-@import url('../src/assets/css/font.css');
 * {
-  font-family: 'Encode Sans Semi Expanded', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', sans-serif !important;
 }
 
 body {
@@ -15,22 +10,18 @@ body {
 /* custom - scrollbar */
 
 /* width */
-
 ::-webkit-scrollbar {
   width: 7px;
 }
 
 /* Track */
-
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px rgb(25, 40, 112);
   border-radius: 2px;
 }
 
 /* Handle */
-
 ::-webkit-scrollbar-thumb {
   background: rgb(63, 81, 181);
-  ;
   border-radius: 2px;
 }

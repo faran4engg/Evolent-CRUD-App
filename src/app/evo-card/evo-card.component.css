@@ -11,8 +11,8 @@
 
 .example-card h5 {
   
-  color: rgba(0, 0, 0, .9);
-  font-weight: 500;
+  color: #e83e8c;
+  font-weight: 700;
   
 }
 
@@ -54,8 +54,10 @@
 
 .online {
   color: rgb(73, 211, 73);
+  font-weight: 600;
 }
 
 .offline {
   color: rgb(240, 65, 65);
+  font-weight: 600;
 }
