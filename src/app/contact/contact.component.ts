@@ -28,9 +28,6 @@ export class ContactComponent implements OnInit {
       this.contactListToCheck = Array.from(this.contactList);
     });
 
-    // this.contactListToCheck = Array.from(this.contactList);
-
-
 
   }
   openFormDialog(formData = ''): void {

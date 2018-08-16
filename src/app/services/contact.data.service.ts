@@ -84,9 +84,7 @@ export class ContactDataService {
   }
 
   filter(searchTerm, dataArr) {
-    // let retval;
     if (!searchTerm) {
-      // retval = dataArr;
       return dataArr;
     }
 
@@ -98,9 +96,6 @@ export class ContactDataService {
         element.email.toLowerCase().includes(searchTerm) ||
         element.phoneNumber.toLowerCase().includes(searchTerm);
     });
-    // console.log(retval);
-
-    // return retval;
 
   }
 

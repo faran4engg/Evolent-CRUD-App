@@ -1,4 +1,3 @@
-// import { ContactDataService } from '../services/data.service';
 import { Component, Inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA, } from '@angular/material';
@@ -17,7 +16,7 @@ export class ContactFormComponent implements OnInit {
   isEditMode: boolean;
   formtitle = 'Create Contact';
 
-  // convenience getter for easy access to form fields
+  // convenience of getter for easy access to form fields
   get f() { return this.contactForm.controls; }
 
   constructor(
