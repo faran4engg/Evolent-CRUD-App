@@ -36,7 +36,7 @@
       <div class="row">
         <div class="col">
           <mat-form-field>
-            <input matInput formControlName="email" placeholder="Email *">
+            <input matInput email formControlName="email" placeholder="Email *">
           </mat-form-field>
           <div class="invalid-feedback" *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
             <div *ngIf="f.email.errors">
