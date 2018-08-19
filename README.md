@@ -77,7 +77,6 @@ The app will automatically reload if you change any of the source files.
 
 ![Responsive-Layout](Responsive-Layout.gif)
 
-
 ---
 
 ## BrowserList
