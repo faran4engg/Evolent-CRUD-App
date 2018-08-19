@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+import { Injectable } from '@angular/core';
 import { ContactFormDialog } from './../models/contact-form-dialog';
 import { StorageService } from './storage.service';
 
@@ -6,24 +6,20 @@ import { StorageService } from './storage.service';
 @Injectable({
     providedIn: 'root'
 })
-export class ContactDataService implements OnInit {
+export class ContactDataService {
 
     // holds contact info
     contactData: Array<ContactFormDialog>;
 
     /**
      *Creates an instance of ContactDataService.
-     * @param {StorageService} storageServ
-     */
-    constructor(public storageServ: StorageService) { }
-
-    /**
-     *Initialize ContactData once
+      *Initialize ContactData once
      *Then making use of storage service to watch over changes in DB
      *Hence subscribing to watchStorage()
      *Improves performance as we no longer need to always call this.storageServ.getAll();
+     * @param {StorageService} storageServ
      */
-    ngOnInit() {
+    constructor(public storageServ: StorageService) {
         this.contactData = this.storageServ.getAll();
         this.storageServ.watchStorage().subscribe((data: string) => {
             this.contactData = JSON.parse(localStorage.getItem('contactList'));
