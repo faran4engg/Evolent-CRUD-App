@@ -1,14 +1,3 @@
-# Evolent App
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-
-
-![Add-Contact](Add-Contact.gif)
-![Search-Contact](Search-Contact.gif)
-![Edit-Contact](Edit-Contact.gif)
-![Responsive-Layout](Responsive-Layout.gif)
-![Delete-Contact](Delete-Contact.gif)
-
 https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46
 
 # Repository Title Goes Here
