@@ -32,7 +32,7 @@
 $ npm install
 ```
 
-> Once node dependencies are installed then please open `command prompt` and run `ng serve` for a dev server. 
+> Once node dependencies are installed then please open `command prompt` and run `ng serve` for a development server. 
 Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
 
