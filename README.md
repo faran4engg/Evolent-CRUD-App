@@ -9,7 +9,7 @@
 
 ---
 
-## Table of Contents (Optional)
+## Table of Contents
 
 - [Installation](#installation)
 - [Features](#features)
@@ -22,11 +22,17 @@
 
 ## Installation
 
-> Please run below command to install node modules in order to run this app locally
+> This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+
+> Please navigate to `Evolent-CRUD-App` folder and run below command to install `node_modules` in order to run this app locally.
 
 ```shell
 $ npm install
 ```
+
+> Once node dependencies are installed then please open `command prompt` and run `ng serve` for a dev server. 
+Navigate to `http://localhost:4200/`. 
+The app will automatically reload if you change any of the source files.
 ---
 
 ## Features
@@ -49,16 +55,19 @@ $ npm install
 
 > Search on enlisted contact
 
-- ![Search-Contact](Search-Contact.gif)
+![Search-Contact](Search-Contact.gif)
 
 > Edit contact
-- ![Edit-Contact](Edit-Contact.gif)
+
+![Edit-Contact](Edit-Contact.gif)
 
 > Delete contact
-- ![Delete-Contact](Delete-Contact.gif)
+
+![Delete-Contact](Delete-Contact.gif)
 
 > Fully Responsive Layout
-- ![Responsive-Layout](Responsive-Layout.gif)
+
+![Responsive-Layout](Responsive-Layout.gif)
 
 
 ---
