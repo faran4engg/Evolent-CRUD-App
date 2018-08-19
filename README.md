@@ -57,18 +57,22 @@ The app will automatically reload if you change any of the source files.
 
 ![Add-Contact](Add-Contact.gif)
 
+---
 > Search on enlisted contact
 
 ![Search-Contact](Search-Contact.gif)
 
+---
 > Edit contact
 
 ![Edit-Contact](Edit-Contact.gif)
 
+---
 > Delete contact
 
 ![Delete-Contact](Delete-Contact.gif)
 
+---
 > Fully Responsive Layout
 
 ![Responsive-Layout](Responsive-Layout.gif)
