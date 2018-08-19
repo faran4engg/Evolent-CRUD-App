@@ -14,6 +14,7 @@
 - [Installation](#installation)
 - [Features](#features)
 - [Screencasts](#screencasts)
+- [BrowserList](#browserlist)
 
 
 ---
@@ -44,7 +45,7 @@ $ npm install
 
 > Add a contact
 
-- ![Add-Contact](Add-Contact.gif)
+![Add-Contact](Add-Contact.gif)
 
 > Search on enlisted contact
 
@@ -62,30 +63,12 @@ $ npm install
 
 ---
 
-## Browser List
+## BrowserList
 
 > Best user experience can be enjoyed on:
 - Google Chrome
 - Mozilla Firefox
 - Safari
 - Microsoft Edge
-
-
----
-
-## FAQ
-
-- **How do I do *specifically* so and so?**
-    - No problem! Just do this.
-
----
-
-## Support
-
-Reach out to me at one of the following places!
-
-- Website at <a href="http://fvcproductions.com" target="_blank">`fvcproductions.com`</a>
-- Twitter at <a href="http://twitter.com/fvcproductions" target="_blank">`@fvcproductions`</a>
-- Insert more social links here.
 
 ---
