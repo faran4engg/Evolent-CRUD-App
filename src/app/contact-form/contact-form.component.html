@@ -23,6 +23,7 @@
           <div class="invalid-feedback" *ngIf="f.firstName.invalid && (f.firstName.dirty || f.firstName.touched)">
             <div *ngIf="f.firstName.errors">
               <div *ngIf="f.firstName.errors.required">First Name is required</div>
+              <div *ngIf="f.firstName.errors.pattern">Please enter only alphabets</div>
             </div>
           </div>
 
@@ -39,6 +40,7 @@
           <div class="invalid-feedback" *ngIf="f.lastName.invalid && (f.lastName.dirty || f.lastName.touched)">
             <div *ngIf="f.lastName.errors">
               <div *ngIf="f.lastName.errors.required">Last Name is required</div>
+              <div *ngIf="f.lastName.errors.pattern">Please enter only alphabets</div>
             </div>
           </div>
         </div>
@@ -54,7 +56,7 @@
           <div class="invalid-feedback" *ngIf="f.email.invalid && (f.email.dirty || f.email.touched)">
             <div *ngIf="f.email.errors">
               <div *ngIf="f.email.errors.required">Email is required</div>
-              <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+              <div *ngIf="f.email.errors.email || f.email.errors.pattern ">Email must be a valid email address</div>
             </div>
           </div>
         </div>
@@ -102,6 +104,6 @@
 
   </form>
   <!-- Form to enter contact details - ends -->
-  
+
 </div>
 <!-- Contact Form - ends -->
