@@ -22,7 +22,9 @@
 
 ## Installation
 
-> This project was generated with [Angular CLI](https://github.com/angular/angular-cli)
+> To proceed with smooth installation you should have Node 8+ version installed in your system
+
+> Also, to serve this app in your local please install Angular CLI as this project was generated with [Angular CLI](https://github.com/angular/angular-cli)
 
 > Please navigate to `Evolent-CRUD-App` folder and run below command to install `node_modules` in order to run this app locally.
 
@@ -33,6 +35,8 @@ $ npm install
 > Once node dependencies are installed then please open `command prompt` and run `ng serve` for a dev server. 
 Navigate to `http://localhost:4200/`. 
 The app will automatically reload if you change any of the source files.
+
+> Alternatively, Please have a look on [Live-Demo](https://evolent-faran.firebaseapp.com/) 
 ---
 
 ## Features
