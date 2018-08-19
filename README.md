@@ -1,8 +1,3 @@
-![Add-Contact](Add-Contact.gif)
-![Search-Contact](Search-Contact.gif)
-![Edit-Contact](Edit-Contact.gif)
-![Responsive-Layout](Responsive-Layout.gif)
-![Delete-Contact](Delete-Contact.gif)
 
 # Evolent App
 
@@ -18,11 +13,7 @@
 
 - [Installation](#installation)
 - [Features](#features)
-- [Contributing](#contributing)
-- [Team](#team)
-- [FAQ](#faq)
-- [Support](#support)
-- [License](#license)
+- [Screencasts](#screencasts)
 
 
 ---
@@ -30,7 +21,7 @@
 
 ## Installation
 
-> Please run below command to install node modules to run this app locally
+> Please run below command to install node modules in order to run this app locally
 
 ```shell
 $ npm install
@@ -49,9 +40,23 @@ $ npm install
 - Search a contact
 
 ---
-## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
+## Screencasts
+
+![Add-Contact](Add-Contact.gif)
+![Search-Contact](Search-Contact.gif)
+![Edit-Contact](Edit-Contact.gif)
+![Responsive-Layout](Responsive-Layout.gif)
+![Delete-Contact](Delete-Contact.gif)
+
+---
+
+## Browser List
+
+> Best user experience can be enjoyed on:
+- Google Chrome
+- Mozilla Firefox
+- Safari
+- Microsoft Edge
 
 
 ---
