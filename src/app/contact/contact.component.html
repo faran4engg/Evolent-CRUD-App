@@ -1,12 +1,32 @@
-<div class="not-found" *ngIf="!contactListToCheck?.length"></div>
+<!-- If We Dont Have Any Record In DB 
+ This section will appear only when we dont have any record in our database.
+ In that case user should add atleast one contact information.
+ By doing so we will display contact list from our database
+-->
+<section class="not-found" *ngIf="!contactListToCheck?.length"></section>
+
+<!-- If We Dont Have Any Record In DB  - ends -->
+
+<!-- If We Have Any Record In DB
+  If we have any record then we will display :
+  1. Place holder for Navbar - (for future enhancements)
+  2. Search contact text-box - I've added this feature out of excitement
+  3. Contact list cards
+-->
 
 <section id="search-result" *ngIf="contactListToCheck?.length">
+  <!-- Place holder for Navbar - starts -->
   <mat-toolbar color="primary">
     <mat-toolbar-row>
       <span id="evo-nav-heading">Evolent Contact App </span>
     </mat-toolbar-row>
   </mat-toolbar>
+  <!-- Place holder for Navbar - ends -->
+
+
   <div class="container">
+
+    <!-- Search contact text-box - starts -->
     <div class="row mb-3">
       <div class="col-lg-4 col-xs-12 col-sm-12 col-md-4 offset-lg-4 offset-md-4">
         <mat-form-field id="search-contact">
@@ -14,28 +34,33 @@
         </mat-form-field>
       </div>
     </div>
+    <!-- Search contact text-box - ends -->
+
+    <!-- Contact list cards - starts  -->
     <div class="row">
       <div class="no-record-wrapper" *ngIf="!contactList.length; else showList">
         <app-no-data></app-no-data>
       </div>
       <div #showList class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-4" *ngFor="let contact of contactList">
+        <!-- reusable component for contact cards: app evolent card -->
         <app-evo-card [card-data]="contact"></app-evo-card>
       </div>
     </div>
+    <!-- Contact list cards - ends  -->
   </div>
 </section>
 
+<!-- If We Have Any Record In DB - ends  -->
+
+<!-- Add a contact Fab button -->
 <div class="container-fluid">
   <div class="row">
     <div class="col">
-      <button class="add-contact-btn  blue-pulse" mat-fab color="primary" matTooltip="Add a new contact" [matTooltipPosition]="position"
+      <button class="add-contact-btn  blue-pulse" mat-fab color="primary" matTooltip="Add a new contact" [matTooltipPosition]="'above'"
         (click)="openFormDialog()">
-        <!-- <i class="material-icons">
-          Add
-        </i> -->
         <img class="contact-add-plus" src="../../assets/img/add.png" alt="ADD">
-        <!-- ADD -->
       </button>
     </div>
   </div>
 </div>
+<!-- Add a contact Fab button - ends -->

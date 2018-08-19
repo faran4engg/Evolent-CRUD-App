@@ -1,7 +1,15 @@
+/*------------------------------------------------------
+If We Dont Have Any Record In DB 
+------------------------------------------------------*/
+
 .not-found {
   background: linear-gradient( rgba(255, 255, 255, 0.2), rgba(0, 0, 0, 0.7)), url(../../assets/img/not-found.jpg) center;
   height: 99.9vh;
 }
+
+/*------------------------------------------------------
+Search Result Section
+------------------------------------------------------*/
 
 #evo-nav-heading {
   width: 100%;
@@ -13,17 +21,21 @@
   margin: 0.7em auto 0;
 }
 
+.no-record-wrapper {
+  text-align: center;
+  position: relative;
+  width: 100%;
+}
+
 .add-contact-btn {
   position: fixed;
   right: 2%;
   bottom: 2%;
 }
 
-.no-record-wrapper {
-  text-align: center;
-  position: relative;
-  width: 100%;
-}
+/*------------------------------------------------------
+Animation for Add a Contact FAB button 
+------------------------------------------------------*/
 
 .blue-pulse {
   animation: blue-pulse 1s infinite;
