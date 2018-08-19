@@ -1,25 +1,14 @@
-# Evolent App
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
-
-
 ![Add-Contact](Add-Contact.gif)
 ![Search-Contact](Search-Contact.gif)
 ![Edit-Contact](Edit-Contact.gif)
 ![Responsive-Layout](Responsive-Layout.gif)
 ![Delete-Contact](Delete-Contact.gif)
 
-https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46
+# Evolent App
 
-# Repository Title Goes Here
+> Designed and implemented a production ready application for maintaining contact information
 
-> Subtitle or Short Description Goes Here
-
-> ideally one sentence
-
-> include terms/tags that can be searched
-
-- For more on these wonderful ~~badgers~~ badges, refer to <a href="http://badges.github.io/badgerbadgerbadger/" target="_blank">`badgerbadgerbadger`</a>.
+> Technology used: Angular 6 , Angular Material , RxJS, and Bootstrap 4
 
 > Tips
 
