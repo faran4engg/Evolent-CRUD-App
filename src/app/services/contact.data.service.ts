@@ -8,12 +8,12 @@ import { StorageService } from './storage.service';
 })
 export class ContactDataService implements OnInit {
 
-    contactData: Array<ContactFormDialog>; // holds contact info
+    // holds contact info
+    contactData: Array<ContactFormDialog>;
 
     /**
      *Creates an instance of ContactDataService.
      * @param {StorageService} storageServ
-     * @memberof ContactDataService
      */
     constructor(public storageServ: StorageService) { }
 
@@ -22,7 +22,6 @@ export class ContactDataService implements OnInit {
      *Then making use of storage service to watch over changes in DB
      *Hence subscribing to watchStorage()
      *Improves performance as we no longer need to always call this.storageServ.getAll();
-     * @memberof ContactDataService
      */
     ngOnInit() {
         this.contactData = this.storageServ.getAll();
@@ -36,7 +35,6 @@ export class ContactDataService implements OnInit {
      *If no contact in DB then initialize to an empty array
      *else push into array returned from DB
      * @param {ContactFormDialog} contact
-     * @memberof ContactDataService
      */
     add(contact: ContactFormDialog) {
         contact.id = this.storageServ.generateId();
@@ -51,7 +49,6 @@ export class ContactDataService implements OnInit {
      *It helps us search record quickly
      *Updates value in linear time complexity
      * @param {ContactFormDialog} contact
-     * @memberof ContactDataService
      */
     edit(contact: ContactFormDialog) {
         const index = this.storageServ.findContactIndexById(contact.id, this.contactData);
@@ -63,8 +60,7 @@ export class ContactDataService implements OnInit {
     *Beauty of adding unique id comes in here as well
     *It helps us search record quickly
     *Deletes value in linear time complexity
-    * @param {string} id
-    * @memberof ContactDataService
+    * @param {string} i
     */
     delete(id: string) {
         const index = this.storageServ.findContactIndexById(id, this.contactData);
@@ -76,7 +72,6 @@ export class ContactDataService implements OnInit {
      *Updates data in our Database
      * @private
      * @param {ContactFormDialog[]} data
-     * @memberof ContactDataService
      */
     private storeInDB(data: ContactFormDialog[]) {
         this.storageServ.setItem('contactList', JSON.stringify(data));
