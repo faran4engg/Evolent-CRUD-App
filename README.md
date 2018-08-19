@@ -16,8 +16,6 @@
 
 ## Table of Contents (Optional)
 
-> If you're `README` has a lot of info, section headers might be nice.
-
 - [Installation](#installation)
 - [Features](#features)
 - [Contributing](#contributing)
@@ -25,6 +23,35 @@
 - [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
+
+
+---
+
+
+## Installation
+
+> Please run below command to install node modules to run this app locally
+
+```shell
+$ npm install
+```
+---
+
+## Features
+
+> Expected functionality:
+- Add a contact
+- List contacts
+- Edit contact
+- Delete contact
+
+> Out of excitement, I have added:
+- Search a contact
+
+---
+## Usage (Optional)
+## Documentation (Optional)
+## Tests (Optional)
 
 
 ---
@@ -44,42 +71,6 @@ let generateProject = project => {
 
 ---
 
-## Installation
-
-- All the `code` required to get started
-- Images of what it should look like
-
-### Clone
-
-- Clone this repo to your local machine using `https://github.com/fvcproductions/SOMEREPO`
-
-### Setup
-
-- If you want more syntax highlighting, format your code like this:
-
-> update and install this package first
-
-```shell
-$ brew update
-$ brew install fvcproductions
-```
-
-> now install npm and bower packages
-
-```shell
-$ npm install
-$ bower install
-```
-
----
-
-## Features
-## Usage (Optional)
-## Documentation (Optional)
-## Tests (Optional)
-
-
----
 
 ## Contributing
 
