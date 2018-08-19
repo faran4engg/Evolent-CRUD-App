@@ -43,19 +43,21 @@ $ npm install
 ## Screencasts
 
 > Add a contact
-![Add-Contact](Add-Contact.gif)
+
+- ![Add-Contact](Add-Contact.gif)
 
 > Search on enlisted contact
-![Search-Contact](Search-Contact.gif)
+
+- ![Search-Contact](Search-Contact.gif)
 
 > Edit contact
-![Edit-Contact](Edit-Contact.gif)
+- ![Edit-Contact](Edit-Contact.gif)
 
 > Delete contact
-![Delete-Contact](Delete-Contact.gif)
+- ![Delete-Contact](Delete-Contact.gif)
 
 > Fully Responsive Layout
-![Responsive-Layout](Responsive-Layout.gif)
+- ![Responsive-Layout](Responsive-Layout.gif)
 
 
 ---
