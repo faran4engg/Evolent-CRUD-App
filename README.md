@@ -10,14 +10,7 @@
 
 > Technology used: `Angular 6` , `Angular Material` , `RxJS`, and `Bootstrap 4`
 
-> Tips
-
-- HAVE WHITE SPACE
-- MAKE IT PRETTY
-- GIFS ARE REALLY COOL
-
-> GIF Tools
-
+> Live application can be accessed from : [Evolent - Faran - Code](https://evolent-faran.firebaseapp.com/) 
 
 ---
 
