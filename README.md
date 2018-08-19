@@ -8,7 +8,7 @@
 
 > Designed and implemented a production ready application for maintaining contact information
 
-> Technology used: Angular 6 , Angular Material , RxJS, and Bootstrap 4
+> Technology used: `Angular 6` , `Angular Material` , `RxJS`, and `Bootstrap 4`
 
 > Tips
 
