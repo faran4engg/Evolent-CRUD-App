@@ -1,9 +1,8 @@
-import { ContactFormDialog } from './../models/contact-form-dialog';
-import { StorageService } from './../services/storage.service';
 import { Component, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
-import { ContactDataService } from '../services/contact.data.service';
 import { ContactFormComponent } from '../contact-form/contact-form.component';
+import { ContactDataService } from '../services/contact.data.service';
+import { StorageService } from './../services/storage.service';
 
 @Component({
     selector: 'app-evo-card',
@@ -12,21 +11,33 @@ import { ContactFormComponent } from '../contact-form/contact-form.component';
 })
 export class EvoCardComponent {
 
-    position = 'above';
-    // tslint:disable-next-line:no-input-rename
+    // Input property to get the data in card component from its parent
+    // example: <app-evo-card [card-data]="contact"></app-evo-card>
     @Input('card-data') cardData: any;
 
+    /**
+     *Creates an instance of EvoCardComponent.
+     * @param {MatDialog} dialog
+     * @param {ContactDataService} contactServ
+     * @param {StorageService} storageServ
+     */
     constructor(public dialog: MatDialog, private contactServ: ContactDataService, private storageServ: StorageService) { }
 
+    /**
+     *Opens Dialog for Edit mode
+     * @param {string} [formData='']
+     */
     openFormDialog(formData = ''): void {
-
-        const dialogRef = this.dialog.open(ContactFormComponent, {
+        this.dialog.open(ContactFormComponent, {
             width: '600px',
             data: formData
         });
-
     }
 
+    /**
+     *Deletes a contact from DB
+     * @param {string} id
+     */
     deleteContact(id: string) {
         this.contactServ.delete(id);
         this.storageServ.showSnackBar('Contact Deleted Successfully', 'OK');
