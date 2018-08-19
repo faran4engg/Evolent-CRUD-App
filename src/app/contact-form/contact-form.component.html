@@ -1,4 +1,7 @@
+<!-- Contact Form - starts -->
 <div class="container">
+
+  <!-- updates title - create contact or update contact -->
   <div class="row">
     <div class="col text-center">
       <h3>
@@ -6,8 +9,12 @@
       </h3>
     </div>
   </div>
+
+  <!-- Form to enter contact details - starts -->
   <form [formGroup]="contactForm" (ngSubmit)="onSubmit(contactForm.value)">
-    <div class="example-container">
+    <div class="fields-container">
+
+      <!-- firstName - starts -->
       <div class="row">
         <div class="col">
           <mat-form-field>
@@ -21,6 +28,9 @@
 
         </div>
       </div>
+      <!-- firstName - ends -->
+
+      <!-- lastName - starts -->
       <div class="row">
         <div class="col">
           <mat-form-field>
@@ -33,6 +43,9 @@
           </div>
         </div>
       </div>
+      <!-- lastName - ends -->
+
+      <!-- email - starts -->
       <div class="row">
         <div class="col">
           <mat-form-field>
@@ -46,6 +59,9 @@
           </div>
         </div>
       </div>
+      <!-- email - ends -->
+
+      <!-- phoneNumber - starts -->
       <div class="row">
         <div class="col">
           <mat-form-field>
@@ -59,6 +75,9 @@
           </div>
         </div>
       </div>
+      <!-- phoneNumber - ends -->
+
+      <!-- status - starts -->
       <div class="row">
         <div class="col">
           <label class="status-label">Status </label>
@@ -68,12 +87,21 @@
           </mat-radio-group>
         </div>
       </div>
+      <!-- status - ends -->
+
     </div>
+
+    <!-- Save and Cancel buttons - starts -->
     <div class="row">
       <div class="col ">
         <button class="btn-position" [disabled]="contactForm.invalid" type="submit" mat-raised-button color="primary">Save</button>
         <button class="btn-position mr-2" mat-raised-button color="accent" mat-dialog-close>Cancel</button>
       </div>
     </div>
+    <!-- Save and Cancel buttons - ends -->
+
   </form>
+  <!-- Form to enter contact details - ends -->
+  
 </div>
+<!-- Contact Form - ends -->
