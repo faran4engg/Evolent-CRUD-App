@@ -5,7 +5,7 @@
 
 > Technology used: `Angular 6` , `Angular Material` , `RxJS`, and `Bootstrap 4`
 
-> Live application can be accessed from : [Evolent - Faran - Code](https://evolent-faran.firebaseapp.com/) 
+> Live application can be accessed from : [Live-Demo](https://evolent-faran.firebaseapp.com/) 
 
 ---
 
@@ -42,11 +42,21 @@ $ npm install
 ---
 ## Screencasts
 
+> Add a contact
 ![Add-Contact](Add-Contact.gif)
+
+> Search on enlisted contact
 ![Search-Contact](Search-Contact.gif)
+
+> Edit contact
 ![Edit-Contact](Edit-Contact.gif)
-![Responsive-Layout](Responsive-Layout.gif)
+
+> Delete contact
 ![Delete-Contact](Delete-Contact.gif)
+
+> Fully Responsive Layout
+![Responsive-Layout](Responsive-Layout.gif)
+
 
 ---
 
